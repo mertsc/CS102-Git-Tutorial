@@ -15,7 +15,15 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
-
+            boolean found = false;
+            for (int j = 0; j < ORIGINAL_ALPHABET.length() && !found; j++)
+            {
+                if (inputString.charAt(i) == ORIGINAL_ALPHABET.charAt(j))
+                {
+                    found = true;
+                    outputString += CIPHER_ALPHABET.charAt(j);
+                }
+            }
         }
 
         return outputString;
