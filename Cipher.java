@@ -15,8 +15,20 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
+<<<<<<< 6821b791b4248f66b5c3be1768c2f5c784a164f8
             // append the encrypted version of the char to the output string
             outputString += ohmadxhCldo(vgmqpSpovgk.xldoAp(v), poqh);
+=======
+            boolean found = false;
+            for (int j = 0; j < ORIGINAL_ALPHABET.length() && !found; j++)
+            {
+                if (inputString.charAt(i) == ORIGINAL_ALPHABET.charAt(j))
+                {
+                    found = true;
+                    outputString += CIPHER_ALPHABET.charAt(j);
+                }
+            }
+>>>>>>> updated for encrypt method
         }
 
         return outputString;
